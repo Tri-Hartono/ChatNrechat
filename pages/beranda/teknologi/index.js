@@ -3,13 +3,13 @@ import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { ImageTeknologi, IconAngry, IconBear, IconSleep } from '../../../assets/images';
 
-export default function index() {
+export default function Teknologi() {
   const ref = useRef(null);
   const IsInView = useInView(ref);
-  const Animation = useAnimation();
+  const animation = useAnimation();
   useEffect(() => {
     if (IsInView) {
-      Animation.start('visible');
+      animation.start('visible');
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }
   }, [IsInView]);

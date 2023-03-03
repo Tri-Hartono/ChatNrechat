@@ -7,10 +7,10 @@ import CardFitur from './card';
 export default function Fitur() {
   const ref = useRef(null);
   const IsInView = useInView(ref);
-  const Animation = useAnimation();
+  const animation = useAnimation();
   useEffect(() => {
     if (IsInView) {
-      Animation.start('visible');
+      animation.start('visible');
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }
   }, [IsInView]);

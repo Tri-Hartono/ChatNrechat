@@ -6,11 +6,11 @@ import { ImageAhmad, ImageUstadz, ImageSmile, ImageLock, ImageSmileAngel, ImageS
 function Header() {
   const ref = useRef(null);
   const IsInView = useInView(ref);
-  const Animation = useAnimation();
+  const animation = useAnimation();
   useEffect(() => {
     if (IsInView) {
-      Animation.start('visibleLeft');
-      Animation.start('visibleRight');
+      animation.start('visibleLeft');
+      animation.start('visibleRight');
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }
   }, [IsInView]);

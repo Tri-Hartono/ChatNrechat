@@ -4,14 +4,14 @@ import { motion, useAnimation, useInView } from 'framer-motion';
 import { LogoCompany } from '../../../assets/images';
 export default function Benner() {
   const ref = useRef(null);
-  const isInView = useInView(ref);
-  const animation = useAnimation();
+  const IsInView = useInView(ref);
+  const Animation = useAnimation();
   useEffect(() => {
-    if (isInView) {
-      animation.start('visible');
+    if (IsInView) {
+      Animation.start('visible');
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }
-  }, [isInView]);
+  }, [IsInView]);
   const variants = {
     hidden: { y: '50%', opacity: 0, transition: { duration: 1.4 } },
     visible: {

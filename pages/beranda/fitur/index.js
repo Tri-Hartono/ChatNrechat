@@ -6,14 +6,14 @@ import CardFitur from './card';
 
 export default function Fitur() {
   const ref = useRef(null);
-  const isInView = useInView(ref);
-  const animation = useAnimation();
+  const IsInView = useInView(ref);
+  const Animation = useAnimation();
   useEffect(() => {
-    if (isInView) {
-      animation.start('visible');
+    if (IsInView) {
+      Animation.start('visible');
       // eslint-disable-next-line react-hooks/exhaustive-deps
     }
-  }, [isInView]);
+  }, [IsInView]);
   const variants = {
     hiddenLeft: { x: '-50%', opacity: 0, transition: { duration: 1 } },
     hiddenCenter: { y: '-50%', opacity: 0, transition: { duration: 2 } },

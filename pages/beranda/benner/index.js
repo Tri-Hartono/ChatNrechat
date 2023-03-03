@@ -9,6 +9,7 @@ export default function Benner() {
   useEffect(() => {
     if (isInView) {
       animation.start('visible');
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
   }, [isInView]);
   const variants = {

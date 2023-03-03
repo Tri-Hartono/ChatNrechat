@@ -11,6 +11,7 @@ function Header() {
     if (isInView) {
       animation.start('visibleLeft');
       animation.start('visibleRight');
+      // eslint-disable-next-line react-hooks/exhaustive-deps
     }
   }, [isInView]);
   const variants = {

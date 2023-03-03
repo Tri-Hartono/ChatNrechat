@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React from 'react';
 import { AppStore, GooglePlay, ImageDownloadAplikasi } from '../../../assets/images';
 
-export default function index() {
+export default function Download() {
   return (
     <div className="w-auto  relative bg-primary p-4 lg:px-[80px] flex flex-col-reverse justify-between md:py-0 md:flex-row gap-10 items-center text-white rounded-xl">
       <div className="md:w-1/2 flex flex-col gap-4 md:p-4  ">

@@ -2,7 +2,7 @@ import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { LogoCompany } from '../../../assets/images';
-export default function index() {
+export default function Benner() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const animation = useAnimation();

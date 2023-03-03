@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { motion, useAnimation, useInView } from 'framer-motion';
 import { ImageAhmad, ImageUstadz, ImageSmile, ImageLock, ImageSmileAngel, ImageSmileLove, ImageCheck, ImageText, ImageDownload, ImageUser, ImageArrow } from '../../../assets/images';
 
-function index() {
+function Header() {
   const ref = useRef(null);
   const isInView = useInView(ref);
   const animation = useAnimation();
@@ -12,7 +12,6 @@ function index() {
       animation.start('visibleLeft');
       animation.start('visibleRight');
     }
-    console.log('Coba view', useInView);
   }, [isInView]);
   const variants = {
     hiddenLeft: { x: '-50%', opacity: 0, transition: { duration: 1 } },
@@ -46,7 +45,7 @@ function index() {
           <div className="flex gap-4">
             <div className="px-[20px] py-[10px] md:px-[45px] md:py-[15px] flex gap-2 cursor-pointer bg-blue-600 text-white font-semibold rounded-md">
               <div>Register</div>
-              <Image src={ImageArrow} width={20} height={20} alt="Image Arrow" />
+              <Image src={ImageArrow} width={20} height={20} style={{ width: 20, height: 20 }} alt="Image Arrow" />
             </div>
             <button className="px-[20px] py-[10px] md:px-[45px] md:py-[15px] rounded-md bg-blue-100 text-blue-600 font-semibold">Learn More</button>
           </div>
@@ -54,7 +53,7 @@ function index() {
         <div className="flex items-center gap-6 text-dark">
           <div className="flex gap-4">
             <div className="w-6 h-6">
-              <Image src={ImageDownload} width={24} height={24} alt="Image Download" />
+              <Image src={ImageDownload} width={24} height={24} style={{ width: 24, height: 24 }} alt="Image Download" />
             </div>
             <div>
               <p className="text-xs">TOTAL DON’TLOUD</p>
@@ -63,7 +62,7 @@ function index() {
           </div>
           <div className="flex gap-4">
             <div className="w-6 h-6">
-              <Image src={ImageUser} width={24} height={24} alt="" />
+              <Image src={ImageUser} width={24} height={24} style={{ width: 24, height: 24 }} alt="" />
             </div>
             <div>
               <p className="text-xs">TOTAL USERS</p>
@@ -144,4 +143,4 @@ function index() {
   );
 }
 
-export default index;
+export default Header;

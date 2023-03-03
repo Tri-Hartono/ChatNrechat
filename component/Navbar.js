@@ -49,7 +49,7 @@ export default function Navbar() {
 
         <ul className="  text-dark hidden lg:flex gap-4 items-center  ">
           {NavbarLink.map((item, index) => (
-            <li className="cursor-pointer">
+            <li key={index} className="cursor-pointer">
               <Link href={item.url}> {item.name}</Link>
             </li>
           ))}
@@ -62,7 +62,7 @@ export default function Navbar() {
       <motion.div animate={navbarOpen ? 'open' : 'closed'} variants={variants} transition={{ duration: 1 }}>
         <ul className="flex flex-col gap-4 text-center text-white lg:hidden">
           {NavbarLink.map((item, index) => (
-            <li className="cursor-pointer">
+            <li key={index} className="cursor-pointer">
               <Link href={item.url}> {item.name}</Link>
             </li>
           ))}

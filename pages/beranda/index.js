@@ -6,7 +6,7 @@ import Teknologi from './teknologi';
 import Download from './download';
 import Question from './question';
 import Head from 'next/head';
-export default function index() {
+export default function Beranda() {
   return (
     <div>
       <Head>

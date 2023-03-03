@@ -11,7 +11,6 @@ export default function index() {
     if (isInView) {
       animation.start('visible');
     }
-    console.log('Coba view', useInView);
   }, [isInView]);
   const variants = {
     hiddenLeft: { x: '-50%', opacity: 0, transition: { duration: 1 } },

@@ -3,7 +3,9 @@ import Beranda from './beranda';
 export default function Home() {
   return (
     <>
-      <Beranda />
+      <Layout title="Beranda">
+        <Beranda />
+      </Layout>
     </>
   );
 }
